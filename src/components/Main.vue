@@ -1,15 +1,13 @@
 <template>
     <main>
-        <div class="content-container">
-            <div>
-                Content goes here </div>
+        <div class="jumbotron-container">
+            <img class="img-fluid" src="../assets/img/jumbotron.jpg" alt="jumbotron">
         </div>
 
-        <div class="wallpaper-img">
-            <img class="img-fluid" src="" alt="">
-        </div>
-
-        <div class="comics-showcase">
+        <div class="comics-showcase ">
+            <div class="current-series">
+                Current Series
+            </div>
             <div class="comics-container">
                 <div class="d-flex flex-wrap pt-4">
                     <ComicsShowcase v-for="(comic, index) in comicsList" :key="index" :comic=comic />
@@ -195,8 +193,16 @@ a {
     padding: 50px;
 }
 
+.jumbotron-container{
+    height: 280px;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
 .comics-showcase {
     background-color: #1c1c1c;
+    position: relative;
 }
 
 .comics-container {
@@ -205,11 +211,21 @@ a {
     text-align: center;
 }
 
-a.btn{
+a.btn, .current-series{
     color: white;
     background: $brandBackGroundColor;
     border-radius: 0;
     margin-bottom: 20px;
     padding: 5px 25px;
+    text-transform: uppercase;
+}
+
+.current-series{
+    display: inline;
+    position: absolute;
+    top: -16px;
+    left: 180px;
+    font-weight: 700;
+    font-size: 18px;
 }
 </style>

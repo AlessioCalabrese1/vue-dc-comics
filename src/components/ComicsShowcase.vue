@@ -22,7 +22,7 @@ export default {
 
     .thumb-container{
         width: 100%;
-        height: 250px;
+        height: 230px;
         overflow: hidden;
         img{
             width: 100%;
