@@ -72,7 +72,6 @@ export default {
 
     a{
         font-size: 12px;
-        list-style: none;
         font-weight: bold;
         color: grey;
         text-decoration: none;
