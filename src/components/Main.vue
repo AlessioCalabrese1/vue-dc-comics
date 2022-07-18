@@ -20,8 +20,11 @@
         <div class="main-options-container">
             <ul>
                 <li v-for="(option, index) in mainOptions" :key="index">
-                    <img :src="require(`../assets/img/${option.image}`)" :alt="option.link">
-                    <p>
+                    <div class="option-image-container">
+                        <img class="option-image" :src="require(`../assets/img/${option.image}`)" :alt="option.link">
+                    </div>
+                    
+                    <p class="option-text ps-3">
                         {{ option.link }}
                     </p>
                 </li>
@@ -227,5 +230,18 @@ a.btn, .current-series{
     left: 180px;
     font-weight: 700;
     font-size: 18px;
+}
+
+.option-image-container{
+    width: 50px;
+}
+.option-image{
+    width: 100%;
+}
+
+.option-text{
+    color: white;   
+    font-size: 14px; 
+    margin: 0;
 }
 </style>
